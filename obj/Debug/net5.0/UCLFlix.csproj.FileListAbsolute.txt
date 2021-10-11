@@ -1,0 +1,16 @@
+D:\Repositorio Local\Faculdade\UCL - Sistemas de Informação\Programação Avançada de Sistemas\Trabalho 1\UCLFlix\bin\Debug\net5.0\UCLFlix.exe
+D:\Repositorio Local\Faculdade\UCL - Sistemas de Informação\Programação Avançada de Sistemas\Trabalho 1\UCLFlix\bin\Debug\net5.0\UCLFlix.deps.json
+D:\Repositorio Local\Faculdade\UCL - Sistemas de Informação\Programação Avançada de Sistemas\Trabalho 1\UCLFlix\bin\Debug\net5.0\UCLFlix.runtimeconfig.json
+D:\Repositorio Local\Faculdade\UCL - Sistemas de Informação\Programação Avançada de Sistemas\Trabalho 1\UCLFlix\bin\Debug\net5.0\UCLFlix.runtimeconfig.dev.json
+D:\Repositorio Local\Faculdade\UCL - Sistemas de Informação\Programação Avançada de Sistemas\Trabalho 1\UCLFlix\bin\Debug\net5.0\UCLFlix.dll
+D:\Repositorio Local\Faculdade\UCL - Sistemas de Informação\Programação Avançada de Sistemas\Trabalho 1\UCLFlix\bin\Debug\net5.0\ref\UCLFlix.dll
+D:\Repositorio Local\Faculdade\UCL - Sistemas de Informação\Programação Avançada de Sistemas\Trabalho 1\UCLFlix\bin\Debug\net5.0\UCLFlix.pdb
+D:\Repositorio Local\Faculdade\UCL - Sistemas de Informação\Programação Avançada de Sistemas\Trabalho 1\UCLFlix\obj\Debug\net5.0\UCLFlix.csproj.AssemblyReference.cache
+D:\Repositorio Local\Faculdade\UCL - Sistemas de Informação\Programação Avançada de Sistemas\Trabalho 1\UCLFlix\obj\Debug\net5.0\UCLFlix.GeneratedMSBuildEditorConfig.editorconfig
+D:\Repositorio Local\Faculdade\UCL - Sistemas de Informação\Programação Avançada de Sistemas\Trabalho 1\UCLFlix\obj\Debug\net5.0\UCLFlix.AssemblyInfoInputs.cache
+D:\Repositorio Local\Faculdade\UCL - Sistemas de Informação\Programação Avançada de Sistemas\Trabalho 1\UCLFlix\obj\Debug\net5.0\UCLFlix.AssemblyInfo.cs
+D:\Repositorio Local\Faculdade\UCL - Sistemas de Informação\Programação Avançada de Sistemas\Trabalho 1\UCLFlix\obj\Debug\net5.0\UCLFlix.csproj.CoreCompileInputs.cache
+D:\Repositorio Local\Faculdade\UCL - Sistemas de Informação\Programação Avançada de Sistemas\Trabalho 1\UCLFlix\obj\Debug\net5.0\UCLFlix.dll
+D:\Repositorio Local\Faculdade\UCL - Sistemas de Informação\Programação Avançada de Sistemas\Trabalho 1\UCLFlix\obj\Debug\net5.0\ref\UCLFlix.dll
+D:\Repositorio Local\Faculdade\UCL - Sistemas de Informação\Programação Avançada de Sistemas\Trabalho 1\UCLFlix\obj\Debug\net5.0\UCLFlix.pdb
+D:\Repositorio Local\Faculdade\UCL - Sistemas de Informação\Programação Avançada de Sistemas\Trabalho 1\UCLFlix\obj\Debug\net5.0\UCLFlix.genruntimeconfig.cache

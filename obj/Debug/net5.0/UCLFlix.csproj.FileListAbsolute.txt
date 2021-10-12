@@ -14,3 +14,35 @@ D:\Repositorio Local\Faculdade\UCL - Sistemas de Informação\Programação Avan
 D:\Repositorio Local\Faculdade\UCL - Sistemas de Informação\Programação Avançada de Sistemas\Trabalho 1\UCLFlix\obj\Debug\net5.0\ref\UCLFlix.dll
 D:\Repositorio Local\Faculdade\UCL - Sistemas de Informação\Programação Avançada de Sistemas\Trabalho 1\UCLFlix\obj\Debug\net5.0\UCLFlix.pdb
 D:\Repositorio Local\Faculdade\UCL - Sistemas de Informação\Programação Avançada de Sistemas\Trabalho 1\UCLFlix\obj\Debug\net5.0\UCLFlix.genruntimeconfig.cache
+C:\Users\Matheus\Desktop\ProgramacaoAvancada\Exception\obj\Debug\net5.0\UCLFlix.csproj.AssemblyReference.cache
+C:\Users\Matheus\Desktop\ProgramacaoAvancada\Exception\obj\Debug\net5.0\UCLFlix.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Matheus\Desktop\ProgramacaoAvancada\Exception\obj\Debug\net5.0\UCLFlix.AssemblyInfoInputs.cache
+C:\Users\Matheus\Desktop\ProgramacaoAvancada\Exception\obj\Debug\net5.0\UCLFlix.AssemblyInfo.cs
+C:\Users\Matheus\Desktop\ProgramacaoAvancada\Exception\obj\Debug\net5.0\UCLFlix.csproj.CoreCompileInputs.cache
+C:\Users\Matheus\Desktop\ProgramacaoAvancada\Exception\obj\Debug\net5.0\UCLFlix.dll
+C:\Users\Matheus\Desktop\ProgramacaoAvancada\Exception\obj\Debug\net5.0\ref\UCLFlix.dll
+C:\Users\Matheus\Desktop\ProgramacaoAvancada\Exception\obj\Debug\net5.0\UCLFlix.pdb
+C:\Users\Matheus\Desktop\ProgramacaoAvancada\Exception\bin\Debug\net5.0\UCLFlix.exe
+C:\Users\Matheus\Desktop\ProgramacaoAvancada\Exception\bin\Debug\net5.0\UCLFlix.deps.json
+C:\Users\Matheus\Desktop\ProgramacaoAvancada\Exception\bin\Debug\net5.0\UCLFlix.runtimeconfig.json
+C:\Users\Matheus\Desktop\ProgramacaoAvancada\Exception\bin\Debug\net5.0\UCLFlix.runtimeconfig.dev.json
+C:\Users\Matheus\Desktop\ProgramacaoAvancada\Exception\bin\Debug\net5.0\UCLFlix.dll
+C:\Users\Matheus\Desktop\ProgramacaoAvancada\Exception\bin\Debug\net5.0\ref\UCLFlix.dll
+C:\Users\Matheus\Desktop\ProgramacaoAvancada\Exception\bin\Debug\net5.0\UCLFlix.pdb
+C:\Users\Matheus\Desktop\ProgramacaoAvancada\Exception\obj\Debug\net5.0\UCLFlix.genruntimeconfig.cache
+C:\Users\Matheus\Desktop\ProgramacaoAvancada\UCLFlix\bin\Debug\net5.0\UCLFlix.exe
+C:\Users\Matheus\Desktop\ProgramacaoAvancada\UCLFlix\bin\Debug\net5.0\UCLFlix.deps.json
+C:\Users\Matheus\Desktop\ProgramacaoAvancada\UCLFlix\bin\Debug\net5.0\UCLFlix.runtimeconfig.json
+C:\Users\Matheus\Desktop\ProgramacaoAvancada\UCLFlix\bin\Debug\net5.0\UCLFlix.runtimeconfig.dev.json
+C:\Users\Matheus\Desktop\ProgramacaoAvancada\UCLFlix\bin\Debug\net5.0\UCLFlix.dll
+C:\Users\Matheus\Desktop\ProgramacaoAvancada\UCLFlix\bin\Debug\net5.0\ref\UCLFlix.dll
+C:\Users\Matheus\Desktop\ProgramacaoAvancada\UCLFlix\bin\Debug\net5.0\UCLFlix.pdb
+C:\Users\Matheus\Desktop\ProgramacaoAvancada\UCLFlix\obj\Debug\net5.0\UCLFlix.csproj.AssemblyReference.cache
+C:\Users\Matheus\Desktop\ProgramacaoAvancada\UCLFlix\obj\Debug\net5.0\UCLFlix.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Matheus\Desktop\ProgramacaoAvancada\UCLFlix\obj\Debug\net5.0\UCLFlix.AssemblyInfoInputs.cache
+C:\Users\Matheus\Desktop\ProgramacaoAvancada\UCLFlix\obj\Debug\net5.0\UCLFlix.AssemblyInfo.cs
+C:\Users\Matheus\Desktop\ProgramacaoAvancada\UCLFlix\obj\Debug\net5.0\UCLFlix.csproj.CoreCompileInputs.cache
+C:\Users\Matheus\Desktop\ProgramacaoAvancada\UCLFlix\obj\Debug\net5.0\UCLFlix.dll
+C:\Users\Matheus\Desktop\ProgramacaoAvancada\UCLFlix\obj\Debug\net5.0\ref\UCLFlix.dll
+C:\Users\Matheus\Desktop\ProgramacaoAvancada\UCLFlix\obj\Debug\net5.0\UCLFlix.pdb
+C:\Users\Matheus\Desktop\ProgramacaoAvancada\UCLFlix\obj\Debug\net5.0\UCLFlix.genruntimeconfig.cache

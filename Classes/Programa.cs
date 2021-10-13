@@ -10,7 +10,7 @@ namespace UCLFlix.Classes
         public Genero Genero { get; protected set; }
         public int Ano { get; protected set; }
         public int Like { get; protected set; }
-        public int Dislike { get; protected set; }
+        public int Deslike { get; protected set; }
 
         public Programa(string nome, string descricao, Genero genero, int ano)
         {
@@ -19,17 +19,7 @@ namespace UCLFlix.Classes
             Genero = genero;
             Ano = ano;
             Like = 0;
-            Dislike = 0;
-        }
-
-        public void DarLike()
-        {
-            Like++;
-        }
-
-        public void DarDislike()
-        {
-            Dislike++;
+            Deslike = 0;
         }
     }
 }

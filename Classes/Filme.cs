@@ -23,7 +23,7 @@ namespace UCLFlix.Classes
             retorno += "Nome: " + Nome + Environment.NewLine;
             retorno += "Descrição: " + Descricao + Environment.NewLine;
             retorno += "Ano: " + Ano + Environment.NewLine;
-            retorno += "Likes: " + Like + "Dislikes: " + Dislike;
+            retorno += "Likes: " + Like + "Dislikes: " + Deslike;
             return retorno;
         }
     }

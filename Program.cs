@@ -10,6 +10,8 @@ using UCLFlix.Repositories;
 using UCLFlix.Views;
 using UCLFlix.Utils;
 
+using UCLFlix.Classes;
+using UCLFlix.Enums;
 
 namespace UCLFlix
 {
@@ -18,6 +20,8 @@ namespace UCLFlix
         static void Main(string[] args)
         {   
             
+            InicializerController.InicializarDadosBancoProgramas();
+
             while(true){
                 bool sair = false;
                 
@@ -44,6 +48,5 @@ namespace UCLFlix
             }
 
         }
-
     }
 }

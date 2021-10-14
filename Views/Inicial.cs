@@ -32,7 +32,7 @@ namespace UCLFlix.Views
         }
 
         public static void Entrar(){
-
+            
         }
 
         public static void Sair(){

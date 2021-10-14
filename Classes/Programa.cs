@@ -1,26 +1,37 @@
 using System;
+using System.Collections.Generic;
 using UCLFlix.Enums;
+using UCLFlix.Interfaces;
 
 namespace UCLFlix.Classes
 {
     [Serializable]
-    public abstract class Programa
+    public abstract class Programa : IAvaliacao
     {
         public string Nome { get; protected set; }
-        public string Descricao { get; protected set; }
         public Genero Genero { get; protected set; }
         public int Ano { get; protected set; }
         public int Like { get; protected set; }
         public int Deslike { get; protected set; }
+        public static List<Programa> repositorioProgramas = new List<Programa>();
 
-        public Programa(string nome, string descricao, Genero genero, int ano)
+        public Programa(string nome, Genero genero, int ano)
         {
             Nome = nome;
-            Descricao = descricao;
             Genero = genero;
             Ano = ano;
             Like = 0;
             Deslike = 0;
+        }
+
+        public void DarLike()
+        {
+            Like++;
+        }
+
+        public void DarDeslike()
+        {
+            Deslike++;
         }
     }
 }

@@ -1,19 +1,19 @@
 using System;
+using System.Collections.Generic;
 using UCLFlix.Enums;
 
 namespace UCLFlix.Classes
 {
     public class Filme : Programa
-    {
-        public Filme(string nome, string descricao, Genero genero) 
-            : base(nome, descricao, genero, DateTime.Today.Year)
+    {        
+        public Filme(string nome, Genero genero) 
+            : base(nome, genero, DateTime.Today.Year)
         {
         }
 
-        public Filme(string nome, string descricao, Genero genero, int ano) 
-            : base(nome, descricao, genero, ano)
-        {
-            
+        public Filme(string nome, Genero genero, int ano) 
+            : base(nome, genero, ano)
+        {   
         }
 
         public override string ToString()
@@ -21,7 +21,6 @@ namespace UCLFlix.Classes
             string retorno = "";
             retorno += "Gênero: " + Genero + Environment.NewLine;
             retorno += "Nome: " + Nome + Environment.NewLine;
-            retorno += "Descrição: " + Descricao + Environment.NewLine;
             retorno += "Ano: " + Ano + Environment.NewLine;
             retorno += "Likes: " + Like + "Dislikes: " + Deslike;
             return retorno;

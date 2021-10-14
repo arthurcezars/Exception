@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UCLFlix.Enums;
 
 namespace UCLFlix.Classes
@@ -7,14 +8,14 @@ namespace UCLFlix.Classes
     {
         public int Temporadas { get; protected set; }
 
-        public Serie(string nome, string descricao, Genero genero, int temporadas) 
-            : base(nome, descricao, genero, DateTime.Today.Year)
+        public Serie(string nome, Genero genero, int temporadas) 
+            : base(nome, genero, DateTime.Today.Year)
         {
             Temporadas = temporadas;
         }
 
-        public Serie(string nome, string descricao, Genero genero, int temporadas, int ano) 
-            : base(nome, descricao, genero, ano)
+        public Serie(string nome, Genero genero, int temporadas, int ano) 
+            : base(nome, genero, ano)
         {
             Temporadas = temporadas;
         }
@@ -24,7 +25,6 @@ namespace UCLFlix.Classes
             string retorno = "";
             retorno += "Gênero: " + Genero + Environment.NewLine;
             retorno += "Nome: " + Nome + Environment.NewLine;
-            retorno += "Descrição: " + Descricao + Environment.NewLine;
             retorno += "Ano: " + Ano + Environment.NewLine;
             retorno += "Temporadas: " + Temporadas + Environment.NewLine;
             retorno += "Likes: " + Like + "Dislikes: " + Deslike;

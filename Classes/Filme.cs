@@ -3,6 +3,7 @@ using UCLFlix.Enums;
 
 namespace UCLFlix.Classes
 {
+    [Serializable]
     public class Filme : Programa
     {
         public Filme(string nome, string descricao, Genero genero) 

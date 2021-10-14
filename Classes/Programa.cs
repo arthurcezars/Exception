@@ -3,6 +3,7 @@ using UCLFlix.Enums;
 
 namespace UCLFlix.Classes
 {
+    [Serializable]
     public abstract class Programa
     {
         public string Nome { get; protected set; }

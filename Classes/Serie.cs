@@ -3,6 +3,7 @@ using UCLFlix.Enums;
 
 namespace UCLFlix.Classes
 {
+    [Serializable]
     public class Serie : Programa
     {
         public int Temporadas { get; protected set; }

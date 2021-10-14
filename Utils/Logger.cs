@@ -4,7 +4,7 @@ namespace UCLFlix.Utils
 {
     public class Logger
     {
-        public static void Debug(string mensagem){
+        public static void Info(string mensagem){
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine(mensagem);
             Console.ForegroundColor = ConsoleColor.White;
@@ -16,7 +16,7 @@ namespace UCLFlix.Utils
             Console.ForegroundColor = ConsoleColor.White;
         }
 
-        public static void Info(string mensagem){
+        public static void Debug(string mensagem){
             Console.ForegroundColor = ConsoleColor.Blue;
             Console.WriteLine(mensagem);
             Console.ForegroundColor = ConsoleColor.White;

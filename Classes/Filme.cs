@@ -23,7 +23,7 @@ namespace UCLFlix.Classes
             retorno += "Gênero: " + Genero + Environment.NewLine;
             retorno += "Nome: " + Nome + Environment.NewLine;
             retorno += "Ano: " + Ano + Environment.NewLine;
-            retorno += "Likes: " + Like + "Dislikes: " + Deslike;
+            retorno += "Likes: " + Like + " Deslikes: " + Deslike;
             return retorno;
         }
     }

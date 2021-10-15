@@ -1,12 +1,16 @@
 using System;
+using System.Collections.Generic;
 using UCLFlix.Classes;
+using UCLFlix.Repositories;
 
 namespace UCLFlix.Views
 {
     public class App
     {
         public static void InprimirCatalogo(){
-            foreach (var programa in Programa.repositorioProgramas)
+            List<Programa> catalago = ProgramasRepository.findAll();
+
+            foreach (var programa in catalago)
             {
                 var filme = programa as Filme;
 
@@ -15,17 +19,12 @@ namespace UCLFlix.Views
                     var serie = programa as Serie;
 
                     Console.WriteLine("Serie:");
-                    Console.WriteLine(serie.Nome);
-                    Console.WriteLine(serie.Genero);
-                    Console.WriteLine(serie.Ano);
-                    Console.WriteLine(serie.Temporadas);
+                    Console.WriteLine(serie.ToString());
                 }
                 else
                 {
                     Console.WriteLine("Filme:");
-                    Console.WriteLine(filme.Nome);
-                    Console.WriteLine(filme.Genero);
-                    Console.WriteLine(filme.Ano);
+                    Console.WriteLine(filme.ToString());
                 }
                 Console.WriteLine();
             }

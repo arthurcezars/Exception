@@ -1,8 +1,8 @@
-﻿using System.Threading;
-using UCLFlix.Controllers;
-using UCLFlix.Views;
+﻿using UCLFlix.Controllers;
+using UCLFlix.Repositories;
+using UCLFlix.Classes;
+using System.Collections.Generic;
 using UCLFlix.Utils;
-
 
 namespace UCLFlix
 {
@@ -14,29 +14,42 @@ namespace UCLFlix
             InicializerController.InicializarDadosBancoProgramas();
             InicializerController.InicializarDadosBancoUsuarios();
 
-            while(true){
-                bool sair = false;
-                
-                int opx = Inicial.EscolhaEntrada();
-                
-                switch (opx){
-                    
-                    case 1:
-                        
-                    break;
+            List<Usuario> usuarios = UsuarioRepository.findAll();
 
-                    case 2:
-                        CadastroController.Cadastrar();
-                    break;
+            Usuario matue = usuarios[0];
 
-                    case 0:
-                        Inicial.Sair();
-                        sair = true;
-                    break;
-                }
-                
-                if(sair) break;
+            List<DistEucl> eucl = LogicaRecomendacaoController.DistanciaEuclidiana(matue);
+
+            Table.PrintRow(eucl.Count.ToString());
+
+            if(eucl.Count != 0){
+                Table.PrintRow(eucl[0].User.Name);
             }
+            
+
+            // while(true){
+            //     bool sair = false;
+                
+            //     int opx = Inicial.EscolhaEntrada();
+                
+            //     switch (opx){
+                    
+            //         case 1:
+                        
+            //         break;
+
+            //         case 2:
+            //             CadastroController.Cadastrar();
+            //         break;
+
+            //         case 0:
+            //             Inicial.Sair();
+            //             sair = true;
+            //         break;
+            //     }
+                
+            //     if(sair) break;
+            // }
 
         }
     }

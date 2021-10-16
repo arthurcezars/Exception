@@ -18,6 +18,7 @@ namespace UCLFlix.Views
             Table.PrintRow("##### Catalago de Programas #####");
             Table.PrintLine();
             Table.PrintRow("ID", "NOME", "GENERO");
+            Table.PrintLine();
             foreach (var item in lista)
             {   
                 Table.PrintRow( c.ToString() ,item.Nome, Enum.GetName(item.Genero));
@@ -26,6 +27,27 @@ namespace UCLFlix.Views
             }
             Table.PrintLine();
             return lista.Count;
+        }
+
+        public static int ListarProgramasRecomendados(DistEucl distEucl)
+        {
+            ListarProgramas();
+            Console.WriteLine();
+
+            Table.PrintLine();
+            Table.PrintRow("##### Catalago de Recomendados #####");
+            Table.PrintLine();
+            Table.PrintRow("ID", "NOME", "GENERO");
+            Table.PrintLine();
+            int c = 1;
+            foreach (var item in distEucl.User.ListaAvaliados)
+            {   
+                Table.PrintRow( c.ToString() ,item.Nome, Enum.GetName(item.Genero));
+                // System.Console.WriteLine($"{c} - {item.Nome} | {Enum.GetName(item.Genero)}");
+                c++;
+            }
+            Table.PrintLine();
+            return distEucl.User.ListaAvaliados.Count;
         }
 
         public static int SelecionarPrograma(){

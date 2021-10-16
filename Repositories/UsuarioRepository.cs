@@ -2,6 +2,7 @@ using UCLFlix.Database;
 using UCLFlix.Classes;
 using System.Linq;
 using System.Collections.Generic;
+using System;
 
 namespace UCLFlix.Repositories
 {
@@ -17,7 +18,13 @@ namespace UCLFlix.Repositories
 
         public static Usuario findUsuarioByUsername(string username){
             List<Usuario> usuarios = DatabaseController.GetDatabase<Usuario>(database);
-            List<Usuario> retorno = (from user in usuarios where user.Username == username select user).ToList();
+            List<Usuario> retorno = (from user in usuarios where user.Username.Equals(username) select user).ToList();
+            return retorno.Count != 0 ? retorno[0] : null; 
+        }
+
+        public static Usuario findUsuarioByUsername(string username, string password){
+            List<Usuario> usuarios = DatabaseController.GetDatabase<Usuario>(database);
+            List<Usuario> retorno = (from user in usuarios where user.Username.Equals(username) && user.Password.Equals(password) select user).ToList();
             return retorno.Count != 0 ? retorno[0] : null; 
         }
 

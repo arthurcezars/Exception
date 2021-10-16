@@ -26,14 +26,14 @@ namespace UCLFlix.Controllers
             List<Usuario> usuarios = UsuarioRepository.findAll();
             
             List<Programa> listasPrimeiros = usuarioLogado.ListaAvaliados.OrderByDescending(filme => filme.Nota).Take(2).ToList(); 
-            System.Console.WriteLine($"Filmes Pegos: {listasPrimeiros[0].Nome} | {listasPrimeiros[1].Nome}");
+            //System.Console.WriteLine($"Filmes Pegos: {listasPrimeiros[0].Nome} | {listasPrimeiros[1].Nome}");
             
             List<DistEucl> listaDistancias = new List<DistEucl>(); 
 
             foreach (var user in usuarios)
             {
                 if(usuarioLogado.Username.Equals(user.Username)) continue;
-                Console.WriteLine($"Comparando {usuarioLogado.Name} com {user.Name}");
+                //Console.WriteLine($"Comparando {usuarioLogado.Name} com {user.Name}");
                 
                 List<int> pos = new List<int> { getIndex(user.ListaAvaliados, listasPrimeiros[0].Nome) , getIndex(user.ListaAvaliados, listasPrimeiros[1].Nome) };
                 System.Console.WriteLine(pos[0] != -1 && pos[1] != -1);
@@ -41,7 +41,7 @@ namespace UCLFlix.Controllers
                 if (pos[0] != -1 && pos[1] != -1)
                 {
                     List<Programa> posUser = new List<Programa> { user.ListaAvaliados[pos[0]], user.ListaAvaliados[pos[1]] };
-                    System.Console.WriteLine($"{user.Name} -- {posUser[0].Nome} | {posUser[1].Nome}");
+                    //System.Console.WriteLine($"{user.Name} -- {posUser[0].Nome} | {posUser[1].Nome}");
                     Double eucl = FormDistanciaEuclidiana(listasPrimeiros[0].Nota, listasPrimeiros[1].Nota, posUser[0].Nota, posUser[1].Nota);
                     listaDistancias.Add( new DistEucl(user, eucl) );
                 }

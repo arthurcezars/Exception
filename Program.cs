@@ -3,6 +3,8 @@ using UCLFlix.Repositories;
 using UCLFlix.Classes;
 using System.Collections.Generic;
 using UCLFlix.Utils;
+using UCLFlix.Views;
+using System;
 
 namespace UCLFlix
 {
@@ -14,7 +16,7 @@ namespace UCLFlix
             InicializerController.InicializarDadosBancoProgramas();
             InicializerController.InicializarDadosBancoUsuarios();
 
-            List<Usuario> usuarios = UsuarioRepository.findAll();
+            /*List<Usuario> usuarios = UsuarioRepository.findAll();
 
             Usuario matue = usuarios[0];
 
@@ -24,32 +26,42 @@ namespace UCLFlix
 
             if(eucl.Count != 0){
                 Table.PrintRow(eucl[0].User.Name);
-            }
-            
+            }*/
 
-            // while(true){
-            //     bool sair = false;
+            while(true){
+                bool sair = false;
                 
-            //     int opx = Inicial.EscolhaEntrada();
+                int opx = Inicial.EscolhaEntrada();
                 
-            //     switch (opx){
+                switch (opx){
                     
-            //         case 1:
-                        
-            //         break;
+                    case 1:
+                        List<DistEucl> eucl = LogicaRecomendacaoController.DistanciaEuclidiana(LoginController.Entrar());
 
-            //         case 2:
-            //             CadastroController.Cadastrar();
-            //         break;
+                        if (eucl.Count > 0)
+                        {
+                            App.ListarProgramasRecomendados(eucl[0]);
+                        }
+                        else
+                        {
+                            App.ListarProgramas();
+                        }
 
-            //         case 0:
-            //             Inicial.Sair();
-            //             sair = true;
-            //         break;
-            //     }
+                        Console.ReadKey();
+                    break;
+
+                    case 2:
+                        CadastroController.Cadastrar();
+                    break;
+
+                    case 0:
+                        Inicial.Sair();
+                        sair = true;
+                    break;
+                }
                 
-            //     if(sair) break;
-            // }
+                if(sair) break;
+            }
 
         }
     }

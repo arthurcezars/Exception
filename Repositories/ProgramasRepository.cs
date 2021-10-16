@@ -9,7 +9,8 @@ namespace UCLFlix.Repositories
         private static string database = "programas";
 
         public static List<Programa> findAll(){
-            return DatabaseController.GetDatabase<Programa>(database);
+            List<Programa> programas =  DatabaseController.GetDatabase<Programa>(database);
+            return programas.Count != 0 ? programas : null; 
         }
 
         public static void SaveAllProgramas(List<Programa> programas){

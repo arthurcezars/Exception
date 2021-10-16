@@ -10,7 +10,6 @@ namespace UCLFlix.Controllers
 {   
     public class CadastroController
     {
-        private static UsuarioRepository userDB = new UsuarioRepository();
         
         public static void Cadastrar(){
             Usuario usuario = new Usuario();
@@ -20,7 +19,7 @@ namespace UCLFlix.Controllers
                 Console.Write("Informe o seu usuario: ");
                 usuario.Username = Console.ReadLine();
 
-                Usuario findUser = userDB.findUsuarioByUsername(usuario.Username);
+                Usuario findUser = UsuarioRepository.findUsuarioByUsername(usuario.Username);
 
                 if(findUser == null){
 
@@ -49,7 +48,7 @@ namespace UCLFlix.Controllers
                     Console.Write("Informe o seu nome: ");
                     usuario.Name = Console.ReadLine();
 
-                    userDB.addNewUser(usuario);
+                    UsuarioRepository.addNewUser(usuario);
 
                     Logger.Info($"Usuario {usuario.Name} cadastrado com Sucesso!");
                     Thread.Sleep(1500);

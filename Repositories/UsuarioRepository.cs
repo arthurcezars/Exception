@@ -8,20 +8,20 @@ namespace UCLFlix.Repositories
     public class UsuarioRepository
     {
         
-        private string database = "usuario";
+        private static string database = "usuario";
 
-        public List<Usuario> findAll(){
+        public static List<Usuario> findAll(){
             List<Usuario> usuarios = DatabaseController.GetDatabase<Usuario>(database);
             return usuarios.Count != 0 ? usuarios : null; 
         }
 
-        public Usuario findUsuarioByUsername(string username){
+        public static Usuario findUsuarioByUsername(string username){
             List<Usuario> usuarios = DatabaseController.GetDatabase<Usuario>(database);
             List<Usuario> retorno = (from user in usuarios where user.Username == username select user).ToList();
             return retorno.Count != 0 ? retorno[0] : null; 
         }
 
-        public bool addNewUser(Usuario usuario){
+        public static bool addNewUser(Usuario usuario){
             try
             {
                 List<Usuario> usuarios = DatabaseController.GetDatabase<Usuario>(database);
@@ -33,6 +33,10 @@ namespace UCLFlix.Repositories
             {
                 return false;
             }
+        }
+
+        public static void SaveAllUsuarios(List<Usuario> usuarios){
+            DatabaseController.SaveDatabase<Usuario>(usuarios, database);
         }
 
     }

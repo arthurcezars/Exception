@@ -6,14 +6,14 @@ namespace UCLFlix.Classes
 {
     [Serializable]
     public class Filme : Programa
-    {        
-        public Filme(string nome, Genero genero) 
-            : base(nome, genero, DateTime.Today.Year)
-        {
-        }
-
+    {   
         public Filme(string nome, Genero genero, int ano) 
             : base(nome, genero, ano)
+        {   
+        }
+
+        public Filme(string nome, Genero genero, int ano, double nota) 
+            : base(nome, genero, ano, nota)
         {   
         }
 
@@ -23,7 +23,7 @@ namespace UCLFlix.Classes
             retorno += "Gênero: " + Genero + Environment.NewLine;
             retorno += "Nome: " + Nome + Environment.NewLine;
             retorno += "Ano: " + Ano + Environment.NewLine;
-            retorno += "Likes: " + Like + " Deslikes: " + Deslike;
+            retorno += "Nota: " + Nota;
             return retorno;
         }
     }

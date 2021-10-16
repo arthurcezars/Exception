@@ -1,5 +1,4 @@
 using System;
-using System.Collections.Generic;
 using UCLFlix.Enums;
 using UCLFlix.Interfaces;
 
@@ -11,27 +10,28 @@ namespace UCLFlix.Classes
         public string Nome { get; protected set; }
         public Genero Genero { get; protected set; }
         public int Ano { get; protected set; }
-        public int Like { get; protected set; }
-        public int Deslike { get; protected set; }
-        public static List<Programa> repositorioProgramas = new List<Programa>();
+        public double Nota { get; protected set; }
 
         public Programa(string nome, Genero genero, int ano)
         {
             Nome = nome;
             Genero = genero;
             Ano = ano;
-            Like = 0;
-            Deslike = 0;
         }
 
-        public void DarLike()
+        public Programa(string nome, Genero genero, int ano, double nota)
         {
-            Like++;
+            Nome = nome;
+            Genero = genero;
+            Ano = ano;
+            Nota = nota;
         }
 
-        public void DarDeslike()
+        public void Avaliar(double nota)
         {
-            Deslike++;
+            Nota = nota;
         }
+
     }
+
 }

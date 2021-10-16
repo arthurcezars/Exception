@@ -40,8 +40,8 @@ namespace UCLFlix.Controllers
 
             List<Programa> la = new List<Programa>() { 
                 new Filme(nome:"O Poderoso Chefão", genero:Genero.Drama, ano:1972, nota:4.5 ),  
-                new Filme(nome:"Pulp Fiction - Tempo De Violência", genero:Genero.Acao, ano:1994, nota:5.0), 
-                new Serie(nome:"Alice in Borderland", genero:Genero.FiccaoCientifica, temporadas:1, ano:2020, nota:3.5) 
+                new Filme(nome:"Pulp Fiction - Tempo De Violência", genero:Genero.Acao, ano:1994, nota:2.0), 
+                new Filme(nome:"John Wick - De Volta Ao Jogo", genero:Genero.Acao, ano:2014, nota:5.0) 
             };
             usuarios.Add( new Usuario("Arthur", "arthur", "123", Genero.Comedia, la) );
 

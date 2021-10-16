@@ -1,17 +1,8 @@
-﻿using System;
-using System.Threading;
-using System.IO;
-using System.Collections.Generic;
-using UCLFlix.Database;
+﻿using System.Threading;
 using UCLFlix.Controllers;
-using UCLFlix.Classes;
-using UCLFlix.Enums;
-using UCLFlix.Repositories;
 using UCLFlix.Views;
 using UCLFlix.Utils;
 
-using UCLFlix.Classes;
-using UCLFlix.Enums;
 
 namespace UCLFlix
 {
@@ -21,6 +12,7 @@ namespace UCLFlix
         {   
             
             InicializerController.InicializarDadosBancoProgramas();
+            InicializerController.InicializarDadosBancoUsuarios();
 
             while(true){
                 bool sair = false;
@@ -30,8 +22,7 @@ namespace UCLFlix
                 switch (opx){
                     
                     case 1:
-                        Logger.Info("Em Construção");
-                        Thread.Sleep(1500);
+                        
                     break;
 
                     case 2:

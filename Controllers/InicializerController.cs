@@ -12,16 +12,68 @@ namespace UCLFlix.Controllers
 
         public static void InicializarDadosBancoProgramas(){
             List<Programa> programas = ProgramasRepository.findAll();
-            if(programas.Count == 0){
-                Logger.Debug("Seed Database...");
+            if(programas == null){
+                Logger.Debug("Seed Database Programas...");
                 Thread.Sleep(1500);
-                startSeed();
-                ProgramasRepository.SaveAllProgramas(Programa.repositorioProgramas);
+                ProgramasRepository.SaveAllProgramas( seedProgramas() );
             }
         }
 
-        public static void startSeed(){
-            Programa.repositorioProgramas.AddProgramas(
+        public static void InicializarDadosBancoUsuarios(){
+            List<Usuario> usuarios = UsuarioRepository.findAll();
+            if(usuarios == null){
+                Logger.Debug("Seed Database Usuarios...");
+                Thread.Sleep(1500);
+                UsuarioRepository.SaveAllUsuarios( seedUsuarios() );
+            }
+        }
+
+        public static List<Usuario> seedUsuarios(){
+            List<Usuario> usuarios = new List<Usuario>();
+
+            List<Programa> lm = new List<Programa>() { 
+                new Filme(nome:"O Poderoso Chefão", genero:Genero.Drama, ano:1972, nota:4.5 ),  
+                new Filme(nome:"John Wick - De Volta Ao Jogo", genero:Genero.Acao, ano:2014, nota:5.0), 
+                new Serie(nome:"Alice in Borderland", genero:Genero.FiccaoCientifica, temporadas:1, ano:2020, nota:3.5) 
+            };
+            usuarios.Add( new Usuario("Matheus", "matheus", "123", Genero.Acao, lm) );
+
+            List<Programa> la = new List<Programa>() { 
+                new Filme(nome:"O Poderoso Chefão", genero:Genero.Drama, ano:1972, nota:4.5 ),  
+                new Filme(nome:"Pulp Fiction - Tempo De Violência", genero:Genero.Acao, ano:1994, nota:5.0), 
+                new Serie(nome:"Alice in Borderland", genero:Genero.FiccaoCientifica, temporadas:1, ano:2020, nota:3.5) 
+            };
+            usuarios.Add( new Usuario("Arthur", "arthur", "123", Genero.Comedia, la) );
+
+            List<Programa> lb = new List<Programa>() { 
+                new Filme(nome:"O Poderoso Chefão", genero:Genero.Drama, ano:1972, nota:1.5 ),  
+                new Filme(nome:"Pulp Fiction - Tempo De Violência", genero:Genero.Acao, ano:1994, nota:3.0), 
+                new Serie(nome:"Impuros", genero:Genero.Acao, temporadas:2, ano:2018, nota:2.5) 
+            };
+            usuarios.Add( new Usuario("Breno", "breno", "123", Genero.Documentario, lb) );
+
+            List<Programa> laq = new List<Programa>() { 
+                new Filme(nome:"O Poderoso Chefão", genero:Genero.Drama, ano:1972, nota:2.0 ),  
+                new Filme(nome:"Pulp Fiction - Tempo De Violência", genero:Genero.Acao, ano:1994, nota:5.0), 
+                new Serie(nome:"Alice in Borderland", genero:Genero.FiccaoCientifica, temporadas:1, ano:2020, nota:0.5) 
+            };
+            usuarios.Add( new Usuario("Aquiles", "aquiles", "123", Genero.Terror, laq) );
+
+            List<Programa> mtg = new List<Programa>() { 
+                new Filme(nome:"O Poderoso Chefão", genero:Genero.Drama, ano:1972, nota:3.0 ),  
+                new Filme(nome:"Pulp Fiction - Tempo De Violência", genero:Genero.Acao, ano:1994, nota:3.0), 
+                new Serie(nome:"Alice in Borderland", genero:Genero.FiccaoCientifica, temporadas:1, ano:2020, nota:5.0) 
+            };
+            usuarios.Add( new Usuario("Mustang", "mustang", "123", Genero.Documentario, mtg) );
+
+            return usuarios;
+        }
+
+        public static List<Programa> seedProgramas(){
+
+            List<Programa> lista = new List<Programa>();
+            
+            lista.AddProgramas(
                 new Filme(nome:"O Poderoso Chefão", genero:Genero.Drama, ano:1972),
                 new Filme(nome:"Parasita", genero:Genero.Suspence, ano:2019),
                 new Filme(nome:"Cidade de Deus", genero:Genero.Acao, ano:2002),
@@ -41,7 +93,7 @@ namespace UCLFlix.Controllers
                 new Filme(nome:"Curtindo A Vida Adoidado", genero:Genero.Comedia, ano:1986)
             );
 
-            Programa.repositorioProgramas.AddProgramas(
+            lista.AddProgramas(
                 new Serie(nome:"Round 6", genero:Genero.Drama, temporadas:1, ano:2021),
                 new Serie(nome:"Sex Education", genero:Genero.Drama, temporadas:3, ano:2019),
                 new Serie(nome:"The Witcher", genero:Genero.Fantasia, temporadas:1, ano:2019),
@@ -59,6 +111,8 @@ namespace UCLFlix.Controllers
                 new Serie(nome:"Lúcifer", genero:Genero.Fantasia, temporadas:6, ano:2016),
                 new Serie(nome:"Suits / Homens de Terno", genero:Genero.Drama, temporadas:9, ano:2011)
             );
+
+            return lista;
         }
     }
 }

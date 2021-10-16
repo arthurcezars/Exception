@@ -8,12 +8,13 @@ namespace UCLFlix.Classes
     {
         public int Temporadas { get; protected set; }
 
-        public Serie(string nome, Genero genero, int temporadas) 
-            : base(nome, genero, DateTime.Today.Year)
+        public Serie(string nome, Genero genero, int temporadas, int ano, double nota) 
+            : base(nome, genero, ano, nota)
         {
             Temporadas = temporadas;
         }
 
+        
         public Serie(string nome, Genero genero, int temporadas, int ano) 
             : base(nome, genero, ano)
         {
@@ -27,7 +28,7 @@ namespace UCLFlix.Classes
             retorno += "Nome: " + Nome + Environment.NewLine;
             retorno += "Ano: " + Ano + Environment.NewLine;
             retorno += "Temporadas: " + Temporadas + Environment.NewLine;
-            retorno += "Likes: " + Like + " Deslikes: " + Deslike;
+            retorno += "Nota: " + Nota;
             return retorno;
         }
     }

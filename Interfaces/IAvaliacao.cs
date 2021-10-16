@@ -2,7 +2,6 @@ namespace UCLFlix.Interfaces
 {
     public interface IAvaliacao
     {
-        void DarLike();
-        void DarDeslike();
+        void Avaliar(double nota);
     }
 }

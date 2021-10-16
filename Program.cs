@@ -1,8 +1,6 @@
 ﻿﻿using UCLFlix.Controllers;
-using UCLFlix.Repositories;
 using UCLFlix.Classes;
 using System.Collections.Generic;
-using UCLFlix.Utils;
 using UCLFlix.Views;
 using System;
 
@@ -15,18 +13,6 @@ namespace UCLFlix
             
             InicializerController.InicializarDadosBancoProgramas();
             InicializerController.InicializarDadosBancoUsuarios();
-
-            /*List<Usuario> usuarios = UsuarioRepository.findAll();
-
-            Usuario matue = usuarios[0];
-
-            List<DistEucl> eucl = LogicaRecomendacaoController.DistanciaEuclidiana(matue);
-
-            Table.PrintRow(eucl.Count.ToString());
-
-            if(eucl.Count != 0){
-                Table.PrintRow(eucl[0].User.Name);
-            }*/
 
             while(true){
                 bool sair = false;

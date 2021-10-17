@@ -23,30 +23,34 @@ namespace UCLFlix.Controllers
         
         public static List<DistEucl> DistanciaEuclidiana(Usuario usuarioLogado)
         {
+            // Busca todos os usuarios do sistema para analise de similaridade.
             List<Usuario> usuarios = UsuarioRepository.findAll();
             
+            // Retorna os 2 programas com melhor avaliação do usuario logado.
             List<Programa> listasPrimeiros = usuarioLogado.ListaAvaliados.OrderByDescending(filme => filme.Nota).Take(2).ToList(); 
-            //System.Console.WriteLine($"Filmes Pegos: {listasPrimeiros[0].Nome} | {listasPrimeiros[1].Nome}");
             
+            // Cria uma lista das Distancias, para adicionar todos os usuarios que tem similaridade com o usuario logado.
             List<DistEucl> listaDistancias = new List<DistEucl>(); 
 
             foreach (var user in usuarios)
             {
+                // Nao verificar o proprio usuario logado.
                 if(usuarioLogado.Username.Equals(user.Username)) continue;
-                //Console.WriteLine($"Comparando {usuarioLogado.Name} com {user.Name}");
-                
-                List<int> pos = new List<int> { getIndex(user.ListaAvaliados, listasPrimeiros[0].Nome) , getIndex(user.ListaAvaliados, listasPrimeiros[1].Nome) };
-                System.Console.WriteLine(pos[0] != -1 && pos[1] != -1);
 
+                // Verifica se o usuario que sera comparado avaliou os mesmo filmes 2 melhores filmes do usuario logado.
+                List<int> pos = new List<int> { getIndex(user.ListaAvaliados, listasPrimeiros[0].Nome) , getIndex(user.ListaAvaliados, listasPrimeiros[1].Nome) };
                 if (pos[0] != -1 && pos[1] != -1)
                 {
+                    // Assim pegando os programas e suas avaliações para colocar na formula da disntancia Euclidiana
                     List<Programa> posUser = new List<Programa> { user.ListaAvaliados[pos[0]], user.ListaAvaliados[pos[1]] };
-                    //System.Console.WriteLine($"{user.Name} -- {posUser[0].Nome} | {posUser[1].Nome}");
                     Double eucl = FormDistanciaEuclidiana(listasPrimeiros[0].Nota, listasPrimeiros[1].Nota, posUser[0].Nota, posUser[1].Nota);
+                    
+                    // E adicionando o usuario, e o valor da formula.
                     listaDistancias.Add( new DistEucl(user, eucl) );
                 }
             }
-
+            
+            // Aqui retornamos as menores distancias, que seria as melhores similaridade com aquele usuario logado.
             return listaDistancias.OrderBy(u => u.Distance).ToList();
             
         }
